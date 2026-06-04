@@ -1,0 +1,1 @@
+My Project is an e-commerce website, that focuses on asynchronous data fetching to create a smooth user experience.

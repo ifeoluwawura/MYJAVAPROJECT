@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Document</title>
+</head>
+<body class="bg-gray-100 justify-center items-center flex min-h-screen">
+    <div class="bg-white max-w-md p-8 rounded-lg shadow-md">
+        <h1 class="text-4xl font-bold flex justify-between mb-2">
+            ARIEL_STYLE
+        </h1>
+
+        <form id="signUp">
+        <div class="mb-5">
+            <label class="text-gray-600 mb-2">Email or Phone Number</label>
+
+            <input type="text" id="email" class="w-full border border-gray-400 p-3 outline-none" placeholder="Please enter your email or phone number">
+            <p id="emailError"></p>
+        </div>
+
+        <div class="mb-5">
+            <label class="text-gray-600 mb-2">Password</label>
+
+            <input type="password" id="password" class="w-full border border-gray-400 p-3 outline-none" placeholder="Password must be at least 8 characters">
+
+            <p id="passwordError"></p>
+        </div>
+
+        <button type="submit" class="w-full bg-black text-white py-4 text-xl font-bold hover:bg-gray-900 transition" onclick="validateForm()">Sign Up</button>
+
+        <div id="loader" class="hidden fixed inset-0 flex items-center justify-center bg-white-70">
+        <div class="w-10 h-10 border-4 border-black-500 border-t-transparent rounded-full animate-spin">
+        </div>
+    </div>
+
+    </div>
+    </form>
+
+        
+<script src="index.js"></script>
+</body>
+</html>
