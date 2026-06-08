@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-
     <title>Document</title>
   </head>
   <body class="bg-white text-gray-800">
@@ -20,6 +19,7 @@
       >
         <input
           type="text"
+          id="searchInput"
           placeholder="Search for items..."
           class="w-full text-sm text-gray-700 bg-transparent outline-none placeholder-gray-400"
         />
@@ -56,6 +56,7 @@
           class="rounded-md border border-black bg-white px-4 py-2 text-xs font-bold tracking-wider text-black uppercase transition-all duration-200 hover:bg-gray-600 cursor-pointer"
           >Login</a
         >
+
         <a
           href="cart.html"
           class="relative flex items-center gap-2 rounded-md bg-black px-4 py-2 text-xs font-bold tracking-wider text-white uppercase transition-all duration-200 hover:bg-gray-800 active:scale-95 cursor-pointer"
@@ -71,20 +72,66 @@
       </div>
     </nav>
 
-    <div class="max-w-6xl mx-auto px-4 py-10 min-h-screen">
-      <h1
-        class="text-xl md:text-2xl font-bold uppercase tracking-widest text-gray-900 border-b pb-4 mb-8"
-      >
-        Your Shopping Cart
-      </h1>
+    <div
+      id="myProducts"
+      class="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4 p-4"
+    ></div>
 
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
-        <div id="cart-container" class="lg:col-span-2 space-y-4"></div>
+    <p id="userError" class="text-red-500 text-center font-bold mt-4"></p>
 
-        <div id="order-summary" class="w-full"></div>
+    <footer
+      class="w-full bg-black text-white mt-auto py-12 px-6 md:px-16 border-t border-gray-800"
+    >
+      <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="flex flex-col gap-3">
+          <h2 class="text-xl font-black tracking-widest text-white">
+            ARIEL_STYLE
+          </h2>
+          <p class="text-gray-400 text-sm leading-relaxed max-w-xs">
+            Elevating modern elegance and timeless designs for your everyday
+            wardrobe.
+          </p>
+        </div>
+
+        <div class="flex flex-col gap-2">
+          <h3 class="text-sm font-bold tracking-wider text-gray-300 uppercase">
+            Explore
+          </h3>
+          <div class="flex flex-col gap-1 text-sm text-gray-400">
+            <a href="#" class="hover:text-white transition-colors">Shop All</a>
+            <a href="#" class="hover:text-white transition-colors">Our Story</a>
+            <a href="#" class="hover:text-white transition-colors"
+              >Contact Us</a
+            >
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-3">
+          <h3 class="text-sm font-bold tracking-wider text-gray-300 uppercase">
+            Stay Connected
+          </h3>
+          <div class="flex gap-2">
+            <input
+              type="email"
+              placeholder="Your email..."
+              class="bg-gray-900 border border-gray-700 text-sm px-3 py-1.5 rounded focus:outline-none focus:border-white w-full max-w-xs"
+            />
+            <button
+              class="bg-white text-black px-4 py-1.5 text-sm font-bold rounded hover:bg-gray-200 transition-colors"
+            >
+              Join
+            </button>
+          </div>
+        </div>
       </div>
-    </div>
 
-    <script src="cart.js"></script>
+      <div
+        class="max-w-6xl mx-auto border-t border-gray-800 mt-10 pt-6 text-center text-xs text-gray-500"
+      >
+        <p>&copy; 2026 ARIEL_STYLE. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="product.js"></script>
   </body>
 </html>
